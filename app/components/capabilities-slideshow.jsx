@@ -24,7 +24,7 @@ export default function CapabilitiesSlideshow() {
     }
 
     const timer = window.setInterval(() => {
-      setIsSliding(true);
+      setIsSliding((current) => (current ? current : true));
     }, 5000);
 
     return () => {
@@ -32,27 +32,21 @@ export default function CapabilitiesSlideshow() {
     };
   }, [slides.length]);
 
-  useEffect(() => {
+  function handleSlideEnd() {
     if (!isSliding) {
-      return undefined;
+      return;
     }
 
-    const slideTimer = window.setTimeout(() => {
-      setIndex((current) => (current + 1) % slides.length);
-      setIsSliding(false);
-    }, 900);
-
-    return () => {
-      window.clearTimeout(slideTimer);
-    };
-  }, [isSliding, slides.length]);
+    setIndex((current) => (current + 1) % slides.length);
+    setIsSliding(false);
+  }
 
   const activeSlide = slides[index] || products[0];
   const nextSlide = slides[(index + 1) % slides.length] || activeSlide;
 
   return (
     <div className={`photo-frame factory-photo capabilities-slider${isSliding ? " is-sliding" : ""}`}>
-      <div className="capabilities-slider-track" aria-live="polite">
+      <div className="capabilities-slider-track" aria-live="polite" onAnimationEnd={handleSlideEnd}>
         <img
           src={activeSlide.image}
           alt={activeSlide.alt || activeSlide.name}
