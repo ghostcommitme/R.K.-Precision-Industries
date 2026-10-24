@@ -312,3 +312,12 @@
 	.hero-points .line-icon{width:30px;height:30px;flex-basis:30px}
 	.hero-points p{font-size:8px}
 }
+
+/* Mobile hero uses a longer text-first layout; keep its background photo on desktop only. */
+@media(max-width:760px){
+	.hero,.hero-inner{height:auto;min-height:max(780px,calc(100svh - 68px))}
+	.hero{background:#edf2f2}
+	.hero-photo{display:none}
+	.hero-inner{align-items:center;padding-block:42px}
+	.hero-copy{padding:24px 0;max-width:560px}
+}
