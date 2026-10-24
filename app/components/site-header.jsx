@@ -18,7 +18,9 @@ export default function SiteHeader() {
           <span className="brand-mark" aria-hidden="true">RK</span>
           <span><strong>{company.name.toUpperCase()}</strong><small>{company.businessType.toUpperCase()}</small></span>
         </a>
-        <button className="menu-toggle" aria-label="Toggle navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "Close" : "Menu"}</button>
+        <button className={`menu-toggle${menuOpen ? " is-open" : ""}`} aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
+          <span aria-hidden="true" /><span aria-hidden="true" /><span aria-hidden="true" />
+        </button>
         <nav className={`main-nav${menuOpen ? " open" : ""}`} aria-label="Main navigation">
           {links.map(([label, href], index) => <a className={(pathname.startsWith("/products") ? href === "/products" : index === 0) ? "active" : ""} href={href} onClick={closeMenu} key={label}>{label}</a>)}
           <a className="nav-cta" href="/#contact" onClick={closeMenu}>Get in touch <span aria-hidden="true">&rarr;</span></a>

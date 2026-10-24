@@ -28,6 +28,7 @@ export function AboutSection() {
 export function ProductsSection() {
   return <section className="section products-section" id="products"><div className="container"><div className="section-heading"><div><Eyebrow>OUR PRODUCTS</Eyebrow><h2>Tooling for precision work.</h2></div><a className="text-link" href="/products">View all products <Arrow /></a></div>
     <div className="product-grid home-product-grid">{homeProducts.map((product, index) => <a className="product-card" href={`/products/${product.slug}`} key={product.name}><div className="product-image"><img src={product.image} alt={product.alt} loading="lazy" decoding="async" /></div><div className="product-meta"><span>0{index + 1} / INSTRUMENTS</span><span className="card-arrow">&rarr;</span></div><h3>{product.name}</h3><p>{product.detail}</p></a>)}</div>
+    <a className="button button-primary mobile-more-products" href="/products">More products <Arrow /></a>
     <div className="product-note"><span className="note-mark">+</span><p><strong>Have a drawing or machine interface?</strong> Share the component, fit or inspection requirement and discuss a suitable tool room solution.</p><a href="/#contact">Discuss your requirement <Arrow /></a></div>
   </div></section>;
 }
