@@ -214,10 +214,10 @@
 	.hero-points{margin-top:22px;flex-wrap:wrap;gap:10px}
 	.hero-points>div{padding:0 10px 0 0;border-right:0}
 	.hero-caption{margin-top:16px}
-	.home-product-grid .product-image{height:auto;aspect-ratio:1/1}
+	.home-product-grid .product-image{height:auto;aspect-ratio:1/1;width:70%;margin:0 auto}
 }
 
 @media(max-width:420px){
 	.hero,.hero-inner{min-height:520px}
-	.home-product-grid .product-image{height:auto;aspect-ratio:1/1}
+	.home-product-grid .product-image{height:auto;aspect-ratio:1/1;width:70%;margin:0 auto}
 }
