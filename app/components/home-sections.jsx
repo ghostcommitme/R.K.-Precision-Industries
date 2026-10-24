@@ -20,7 +20,7 @@ export function HeroSection() {
 export function AboutSection() {
   return <section className="section about-section" id="about"><div className="container about-grid">
     <div className="photo-frame about-photo"><img src="/images/products/hobbing-arbor/hobbing-arbor-02.jpeg" alt="Precision hobbing arbors and machine tooling" loading="lazy" decoding="async" /></div>
-    <div className="about-copy"><Eyebrow>ABOUT R.K. PRECISION INDUSTRIES</Eyebrow><h2>Precision tool room work<br />built around your part.</h2><p>R.K. Precision Industries undertakes precision tool room work for manufacturers who need purpose-built tooling, workholding and inspection fixtures.</p><p>Work includes arbors, collet chucks, gear hobbing fixtures and inspection tooling, with requirements reviewed against the part, drawing and machine interface.</p><a className="text-link" href="#capabilities">Explore capabilities <Arrow /></a></div>
+    <div className="about-copy"><Eyebrow>ABOUT R.K. PRECISION INDUSTRIES</Eyebrow><h2>Precision tool room work<br />built around your part.</h2><p>Purpose-built arbors, collet chucks, gear hobbing fixtures and inspection tooling, tailored to your component, drawing and machine.</p><a className="text-link" href="#capabilities">Explore capabilities <Arrow /></a></div>
     <div className="about-facts"><div><small>BUSINESS</small><strong>Precision tool room work</strong></div><div><small>PRODUCT FOCUS</small><strong>Arbors, chucks &amp; fixtures</strong></div><div><small>LOCATION</small><strong>MIDC Waluj<br />Chh. Sambhajinagar</strong></div></div>
   </div></section>;
 }
