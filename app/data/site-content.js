@@ -8,6 +8,8 @@
   gstin: "27AAHFR6904M1ZQ",
 };
 
+export const whatsappNumber = company.phoneLink.replace(/\D/g, "");
+
 export const products = [
   { slug: "hsk-arbor", name: "HSK Arbor", detail: "HSK toolholding arbor for machining applications", overview: "An HSK arbor used to connect a cutting tool with a machine spindle. Review taper format, tool interface and assembly requirements with R.K. Precision Industries to identify the suitable configuration for your setup.", highlights: ["HSK interface for compatible spindle systems", "Tool connection and geometry selected for the application", "Configuration checked against machine and tooling requirements"], image: "/images/products/hsk-arbor/hsk-arbor-01.jpeg", gallery: ["/images/products/hsk-arbor/hsk-arbor-01.jpeg", "/images/products/hsk-arbor/hsk-arbor-02.jpeg"], alt: "HSK arbor and precision toolholding components" },
   { slug: "cnc-collet-chuck", name: "CNC Collet Chuck", detail: "Precision clamping for CNC setups", overview: "A CNC collet chuck assembly for holding compatible tooling or workpieces during machining. Confirm the machine interface, clamping range and component dimensions against your setup.", highlights: ["Compact collet-style clamping assembly", "Interface and bore selected for the machine and part", "Configuration reviewed against your machining setup"], image: "/images/products/cnc-collet-chuck/cnc-collet-chuck-01.jpeg", alt: "CNC collet chuck assembly" },

@@ -1,11 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { whatsappNumber } from "../data/site-content";
 
 export default function ContactForm() {
   const [status, setStatus] = useState("");
-  const whatsappNumber = "919423452658";
-
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -30,5 +29,5 @@ export default function ContactForm() {
     event.currentTarget.reset();
   }
 
-  return <form className="contact-form" onSubmit={handleSubmit}><p className="form-heading">Send us a note<span>We usually respond within one business day.</span></p><div className="form-row"><label>Your name<input name="name" autoComplete="name" placeholder="Name" required /></label><label>Phone number<input name="phone" type="tel" autoComplete="tel" placeholder="Mobile number" required /></label></div><label>Work email<input name="email" type="email" autoComplete="email" placeholder="you@company.com" required /></label><label>How can we help?<textarea name="message" placeholder="Tell us about what you need" rows="2" required /></label><button className="button button-primary" type="submit">Send enquiry <span aria-hidden="true">&rarr;</span></button><small className="form-note" aria-live="polite">{status || "By submitting, you agree that our team can contact you about your enquiry."}</small></form>;
+  return <form className="contact-form" onSubmit={handleSubmit}><p className="form-heading">Send us a note<span>We usually respond within one business day.</span></p><div className="form-row"><label>Your name<input name="name" autoComplete="name" placeholder="Name" required /></label><label>Phone number<input name="phone" type="tel" autoComplete="tel" placeholder="Mobile number" required /></label></div><label>Work email<input name="email" type="email" autoComplete="email" placeholder="you@company.com" required /></label><label>How can we help?<textarea name="message" placeholder="Tell us about what you need" rows="2" required /></label><button className="button button-primary" type="submit">Send enquiry <span aria-hidden="true">&rarr;</span></button><small className="form-note" aria-live="polite">{status || <>Submitting opens WhatsApp with your enquiry. See our <a href="/privacy">Privacy Policy</a>.</>}</small></form>;
 }
