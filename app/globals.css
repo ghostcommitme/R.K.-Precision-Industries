@@ -295,3 +295,20 @@
 	.home-product-grid .product-image{height:auto;aspect-ratio:1/1;width:100%;margin:0 auto}
 	.about-photo{height:165px}
 }
+
+/* Keep hero benefits clear and understated on narrow screens. */
+@media(max-width:760px){
+	.hero-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:0;margin-top:22px;padding:8px 0;border-block:1px solid #cbd8df}
+	.hero-points>div{min-width:0;justify-content:center;gap:7px;padding:4px 8px;border:0;border-right:1px solid #cbd8df;border-radius:0;background:transparent;backdrop-filter:none}
+	.hero-points>div:first-child{padding-left:8px}
+	.hero-points>div:last-child{border-right:0}
+	.hero-points .line-icon{width:36px;height:36px;flex:0 0 36px;background:rgba(255,255,255,.8)}
+	.hero-points .line-icon::before{font-size:17px}
+	.hero-points p{font-size:10px;line-height:1.4;color:#40596f}
+}
+@media(max-width:360px){
+	.hero-points>div{gap:5px;padding-inline:4px}
+	.hero-points>div:first-child{padding-left:4px}
+	.hero-points .line-icon{width:30px;height:30px;flex-basis:30px}
+	.hero-points p{font-size:8px}
+}

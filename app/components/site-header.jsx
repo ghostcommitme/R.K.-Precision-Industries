@@ -23,7 +23,6 @@ export default function SiteHeader() {
         </button>
         <nav className={`main-nav${menuOpen ? " open" : ""}`} aria-label="Main navigation">
           {links.map(([label, href], index) => <a className={(pathname.startsWith("/products") ? href === "/products" : index === 0) ? "active" : ""} href={href} onClick={closeMenu} key={label}>{label}</a>)}
-          <a className="nav-cta" href="/#contact" onClick={closeMenu}>Get in touch <span aria-hidden="true">&rarr;</span></a>
         </nav>
       </div>
     </header>
