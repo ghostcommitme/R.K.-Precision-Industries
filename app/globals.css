@@ -320,4 +320,14 @@
 	.hero-photo{display:none}
 	.hero-inner{align-items:center;padding-block:42px}
 	.hero-copy{padding:24px 0;max-width:560px}
+	.capabilities-section{padding-block:46px}
+	.capabilities-grid{gap:18px}
+	.capabilities-slider{height:190px}
+	.image-label{padding:9px 11px;font-size:7px;letter-spacing:1px}
+	.capabilities-copy h2{font-size:27px;line-height:1.15;margin-bottom:10px}
+	.capabilities-copy .eyebrow{margin-bottom:9px}
+	.capabilities-copy>p:not(.eyebrow){font-size:12px;line-height:1.6;margin-bottom:8px}
+	.capability-list{margin:14px 0}
+	.capability-list>div{grid-template-columns:30px 1fr 16px;gap:8px;padding:10px 0;font-size:11px}
+	.capabilities-copy .button{min-height:40px;padding:10px 13px}
 }
