@@ -319,7 +319,10 @@
 	.hero{background:#edf2f2}
 	.hero-photo{display:none}
 	.hero-inner{align-items:flex-start;padding-block:0}
-	.hero-copy{padding:38px 0 38px;max-width:560px}
+	.hero-copy{padding:54px 0 54px;max-width:560px}
+	.hero-actions{margin-top:26px}
+	.hero-points{margin-top:32px}
+	.hero-caption{margin-top:20px}
 	.capabilities-section{padding-block:46px}
 	.capabilities-grid{gap:18px}
 	.capabilities-slider{height:190px}
