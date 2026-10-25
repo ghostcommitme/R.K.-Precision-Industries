@@ -57,23 +57,13 @@ export function ContactSection() {
   return (
     <section className="contact-section" id="contact">
       <div className="container contact-grid">
-        <div className="contact-information">
-          <div className="contact-intro">
-            <Eyebrow>CONTACT</Eyebrow>
-            <h2>{company.name}</h2>
-            <p>{company.businessType}</p>
-            <p>For product enquiries, drawings and tool room requirements.</p>
-          </div>
-          <div className="contact-details">
-            <a className="contact-detail mobile-detail" href={`tel:${company.phoneLink}`}><span className="contact-icon">&rarr;</span><span><small>MOBILE</small><strong>Mo. {company.phone}</strong></span></a>
-            <a className="contact-detail email-detail" href={`mailto:${company.email}`}><span className="contact-icon">&rarr;</span><span><small>EMAIL</small><strong>{company.email}</strong></span></a>
-            <div className="contact-detail address-detail"><span className="contact-icon">&bull;</span><span><small>ADDRESS</small><strong>{company.address}</strong></span></div>
-            <div className="contact-detail gst-detail"><span className="contact-icon">G</span><span><small>GSTIN</small><strong>{company.gstin}</strong></span></div>
-          </div>
-          <div className="contact-map">
-            <div className="contact-map-heading">OUR LOCATION</div>
-            <iframe src={mapEmbedUrl} title={`${company.name} location on Google Maps`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-          </div>
+        <div className="contact-intro"><Eyebrow>CONTACT</Eyebrow><h2>{company.name}</h2><p>{company.businessType}</p><p>For product enquiries, drawings and tool room requirements.</p></div>
+        <div className="contact-details">
+          <a className="contact-detail" href={`tel:${company.phoneLink}`}><span className="contact-icon">&rarr;</span><span><small>MOBILE</small><strong>Mo. {company.phone}</strong></span></a>
+          <a className="contact-detail" href={`mailto:${company.email}`}><span className="contact-icon">&rarr;</span><span><small>EMAIL</small><strong>{company.email}</strong></span></a>
+          <div className="contact-detail address-detail"><span className="contact-icon">&bull;</span><span><small>ADDRESS</small><strong>{company.address}</strong></span></div>
+          <div className="contact-detail gst-detail"><span className="contact-icon">G</span><span><small>GSTIN</small><strong>{company.gstin}</strong></span></div>
+          <div className="contact-map"><div className="contact-map-heading">OUR LOCATION</div><iframe src={mapEmbedUrl} title={`${company.name} location on Google Maps`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div>
         </div>
         <ContactForm />
       </div>

@@ -452,3 +452,39 @@
 	.contact-map iframe{height:176px;border-radius:0 0 6px 6px}
 	.contact-form{grid-column:auto;padding:16px;gap:9px;border-radius:7px}
 }
+
+/* Restore the original three-column Contact layout with the map under the details. */
+@media(min-width:761px){
+	.contact-section{min-height:0;padding-block:56px}
+	.contact-grid{grid-template-columns:.9fr .8fr 1.2fr;gap:58px;align-items:start}
+	.contact-intro,.contact-details,.contact-form{grid-column:auto}
+	.contact-details{display:block;padding-top:8px}
+	.contact-detail{min-height:0;align-items:center;gap:14px;margin-bottom:22px;padding:0;border:0;border-radius:0;background:transparent}
+	.contact-detail .contact-icon{width:37px;height:37px;flex:0 0 37px}
+	.contact-detail strong{font-size:12px;line-height:1.45}
+	.contact-map{grid-column:auto;margin-top:4px;overflow:hidden;border:0;border-radius:0;background:transparent}
+	.contact-map-heading{display:block;padding:0;margin-bottom:7px}
+	.contact-map iframe{height:132px;border-radius:5px}
+	.contact-form{align-self:start;padding:18px;gap:10px;border-radius:0}
+}
+@media(max-width:760px){
+	.contact-section{display:block;min-height:0;padding-block:44px}
+	.contact-grid{grid-template-columns:1fr 1fr;gap:25px;align-items:start}
+	.contact-intro,.contact-details,.contact-form{grid-column:1 / -1}
+	.contact-intro{padding:0}
+	.contact-intro h2{font-size:28px}
+	.contact-details{display:grid;grid-template-columns:1fr 1fr;column-gap:18px;row-gap:0;padding-top:0}
+	.contact-detail{min-height:0;align-items:center;gap:9px;margin-bottom:14px;padding:0;border:0;border-radius:0;background:transparent}
+	.contact-detail .contact-icon{width:30px;height:30px;flex:0 0 30px}
+	.contact-detail strong{font-size:10px;line-height:1.4}
+	.address-detail,.gst-detail,.contact-map{grid-column:1 / -1}
+	.address-detail strong{line-height:1.2}
+	.contact-map{margin-top:2px;overflow:hidden;border:0;border-radius:0;background:transparent}
+	.contact-map-heading{padding:0;margin-bottom:7px}
+	.contact-map iframe{height:118px;border-radius:5px}
+	.contact-form{grid-column:1 / -1;align-self:start;padding:18px;gap:10px;border-radius:0}
+}
+@media(max-width:420px){
+	.contact-details{grid-template-columns:1fr}
+}
+.address-detail strong{line-height:1.25}
