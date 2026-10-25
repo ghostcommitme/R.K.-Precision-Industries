@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { company } from "../data/site-content";
+import { company, googleMapsUrl } from "../data/site-content";
 
-const links = [["Home", "/#home"], ["About", "/#about"], ["Products", "/products"], ["Capabilities", "/#capabilities"], ["Industries", "/#industries"], ["Contact", "/#contact"]];
+const links = [["Home", "/#home"], ["About", "/#about"], ["Products", "/products"], ["Capabilities", "/#capabilities"], ["Industries", "/#industries"], ["Contact", "/#contact"], ["Location", googleMapsUrl]];
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,7 +22,11 @@ export default function SiteHeader() {
           <span aria-hidden="true" /><span aria-hidden="true" /><span aria-hidden="true" />
         </button>
         <nav className={`main-nav${menuOpen ? " open" : ""}`} aria-label="Main navigation">
-          {links.map(([label, href], index) => <a className={(pathname.startsWith("/products") ? href === "/products" : index === 0) ? "active" : ""} href={href} onClick={closeMenu} key={label}>{label}</a>)}
+          {links.map(([label, href], index) => {
+            const external = href.startsWith("https://");
+            const active = !external && (pathname.startsWith("/products") ? href === "/products" : index === 0);
+            return <a className={active ? "active" : ""} href={href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined} onClick={closeMenu} key={label}>{label}</a>;
+          })}
         </nav>
       </div>
     </header>

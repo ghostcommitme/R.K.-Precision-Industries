@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function ProductGallery({ product }) {
   const images = product.gallery?.length ? product.gallery : [product.image];
-  const defaultIndex = product.name === "Steel Rokker Cage" && images.length > 2 ? 2 : 0;
+  const defaultIndex = product.name === "Steel Roller Cage" && images.length > 2 ? 2 : 0;
   const [activeIndex, setActiveIndex] = useState(defaultIndex);
 
   return <div className="product-gallery">

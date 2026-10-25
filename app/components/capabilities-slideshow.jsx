@@ -6,7 +6,7 @@ import { products } from "../data/site-content";
 const capabilityImageOrder = [
   "gear-roller-tester",
   "hobbing-arbor",
-  "steel-rokker-cage",
+  "steel-roller-cage",
   "dead-center",
   "hobbing-fixture-elfco",
 ];

@@ -1,10 +1,10 @@
-﻿import { capabilities, company, industries, products, strengths } from "../data/site-content";
+import { capabilities, company, googleMapsUrl, industries, mapEmbedUrl, products, strengths } from "../data/site-content";
 import CapabilitiesSlideshow from "./capabilities-slideshow";
 import ContactForm from "./contact-form";
 import Eyebrow from "./eyebrow";
 
 function Arrow() { return <span aria-hidden="true">&rarr;</span>; }
-const featuredProductOrder = ["hsk-arbor", "steel-rokker-cage"];
+const featuredProductOrder = ["hsk-arbor", "steel-roller-cage"];
 const homeProducts = [...products].sort((left, right) => { const leftRank = featuredProductOrder.indexOf(left.slug); const rightRank = featuredProductOrder.indexOf(right.slug); return (leftRank < 0 ? 99 : leftRank) - (rightRank < 0 ? 99 : rightRank); });
 
 export function HeroSection() {
@@ -54,6 +54,6 @@ export function TrustSection() {
 }
 
 export function ContactSection() {
-  return <section className="contact-section" id="contact"><div className="container contact-grid"><div className="contact-intro"><Eyebrow>CONTACT</Eyebrow><h2>{company.name}</h2><p>{company.businessType}</p><p>For product enquiries, drawings and tool room requirements.</p></div><div className="contact-details"><a className="contact-detail" href={`tel:${company.phoneLink}`}><span className="contact-icon">&rarr;</span><span><small>MOBILE</small><strong>Mo. {company.phone}</strong></span></a><a className="contact-detail" href={`mailto:${company.email}`}><span className="contact-icon">&rarr;</span><span><small>EMAIL</small><strong>{company.email}</strong></span></a><div className="contact-detail"><span className="contact-icon">&bull;</span><span><small>ADDRESS</small><strong>{company.address}</strong></span></div><div className="contact-detail gst-detail"><span className="contact-icon">G</span><span><small>GSTIN</small><strong>{company.gstin}</strong></span></div></div><ContactForm /></div></section>;
+  return <section className="contact-section" id="contact"><div className="container contact-grid"><div className="contact-intro"><Eyebrow>CONTACT</Eyebrow><h2>{company.name}</h2><p>{company.businessType}</p><p>For product enquiries, drawings and tool room requirements.</p></div><div className="contact-details"><a className="contact-detail" href={`tel:${company.phoneLink}`}><span className="contact-icon">&rarr;</span><span><small>MOBILE</small><strong>Mo. {company.phone}</strong></span></a><a className="contact-detail" href={`mailto:${company.email}`}><span className="contact-icon">&rarr;</span><span><small>EMAIL</small><strong>{company.email}</strong></span></a><div className="contact-detail"><span className="contact-icon">&bull;</span><span><small>ADDRESS</small><strong>{company.address}</strong></span></div><div className="contact-detail gst-detail"><span className="contact-icon">G</span><span><small>GSTIN</small><strong>{company.gstin}</strong></span></div><div className="contact-map"><div className="contact-map-heading"><span>OUR LOCATION</span><a href={googleMapsUrl} target="_blank" rel="noreferrer">Open map <span aria-hidden="true">&rarr;</span></a></div><iframe src={mapEmbedUrl} title={`${company.name} location on Google Maps`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div></div><ContactForm /></div></section>;
 }
 
