@@ -423,3 +423,32 @@
 	.contact-form{padding:24px;gap:13px;border-radius:7px}
 	.form-heading{font-size:17px}
 }
+
+/* Unified Contact layout: information and map stay together beside the form. */
+@media(min-width:761px){
+	.contact-grid{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:36px;align-items:stretch}
+	.contact-information{display:grid;align-content:start;gap:18px;min-width:0}
+	.contact-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:0;min-width:0}
+	.contact-detail{min-width:0;min-height:68px;align-items:flex-start;gap:10px;margin:0;padding:11px;background:rgba(255,255,255,.68);border:1px solid #dce6e8;border-radius:6px}
+	.contact-detail .contact-icon{width:32px;height:32px;flex:0 0 32px}
+	.contact-detail strong{font-size:10px;line-height:1.5;overflow-wrap:anywhere}
+	.address-detail,.gst-detail{grid-column:1 / -1}
+	.contact-map{grid-column:auto;margin:0;overflow:hidden;border:1px solid #dce6e8;border-radius:7px;background:#fff}
+	.contact-map-heading{padding:10px 12px 0}
+	.contact-map iframe{height:190px;border-radius:0 0 6px 6px}
+	.contact-form{align-content:start;padding:26px;gap:13px;border-radius:8px}
+}
+@media(max-width:760px){
+	.contact-section{padding-block:40px}
+	.contact-grid{grid-template-columns:minmax(0,1fr);gap:18px;align-items:start}
+	.contact-information{display:grid;gap:13px;min-width:0}
+	.contact-details{grid-column:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:0}
+	.contact-detail{min-width:0;min-height:62px;align-items:flex-start;gap:8px;margin:0;padding:9px;background:rgba(255,255,255,.72);border:1px solid #dce6e8;border-radius:6px}
+	.contact-detail .contact-icon{width:30px;height:30px;flex:0 0 30px}
+	.contact-detail strong{font-size:9px;line-height:1.4;overflow-wrap:anywhere}
+	.address-detail,.gst-detail{grid-column:1 / -1}
+	.contact-map{grid-column:auto;margin:0;overflow:hidden;border:1px solid #dce6e8;border-radius:7px;background:#fff}
+	.contact-map-heading{padding:9px 10px 0}
+	.contact-map iframe{height:176px;border-radius:0 0 6px 6px}
+	.contact-form{grid-column:auto;padding:16px;gap:9px;border-radius:7px}
+}
