@@ -11,8 +11,8 @@
 export const whatsappNumber = company.phoneLink.replace(/\D/g, "");
 
 export const mapCoordinates = { latitude: 19.8439, longitude: 75.2285 };
-export const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${mapCoordinates.latitude},${mapCoordinates.longitude}`;
-export const mapEmbedUrl = `https://www.google.com/maps?q=${mapCoordinates.latitude},${mapCoordinates.longitude}&z=16&output=embed`;
+export const googleMapsUrl = "https://maps.app.goo.gl/aBxkefU67DU16Bjk6";
+export const coordinateMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${mapCoordinates.latitude},${mapCoordinates.longitude}`;
 
 export const products = [
   { slug: "hsk-arbor", name: "HSK Arbor", detail: "HSK toolholding arbor for machining applications", overview: "An HSK arbor used to connect a cutting tool with a machine spindle. Review taper format, tool interface and assembly requirements with R.K. Precision Industries to identify the suitable configuration for your setup.", highlights: ["HSK interface for compatible spindle systems", "Tool connection and geometry selected for the application", "Configuration checked against machine and tooling requirements"], image: "/images/products/hsk-arbor/hsk-arbor-01.jpeg", gallery: ["/images/products/hsk-arbor/hsk-arbor-01.jpeg", "/images/products/hsk-arbor/hsk-arbor-02.jpeg"], alt: "HSK arbor and precision toolholding components" },
