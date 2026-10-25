@@ -426,7 +426,7 @@
 
 /* Unified Contact layout: information and map stay together beside the form. */
 @media(min-width:761px){
-	.contact-grid{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:36px;align-items:stretch}
+	.contact-grid{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:36px;align-items:start}
 	.contact-information{display:grid;align-content:start;gap:18px;min-width:0}
 	.contact-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:0;min-width:0}
 	.contact-detail{min-width:0;min-height:68px;align-items:flex-start;gap:10px;margin:0;padding:11px;background:rgba(255,255,255,.68);border:1px solid #dce6e8;border-radius:6px}
@@ -436,7 +436,7 @@
 	.contact-map{grid-column:auto;margin:0;overflow:hidden;border:1px solid #dce6e8;border-radius:7px;background:#fff}
 	.contact-map-heading{padding:10px 12px 0}
 	.contact-map iframe{height:190px;border-radius:0 0 6px 6px}
-	.contact-form{align-content:start;padding:26px;gap:13px;border-radius:8px}
+	.contact-form{align-self:start;align-content:start;padding:26px;gap:13px;border-radius:8px}
 }
 @media(max-width:760px){
 	.contact-section{padding-block:40px}
