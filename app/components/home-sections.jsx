@@ -8,7 +8,7 @@ const featuredProductOrder = ["hsk-arbor", "steel-rokker-cage"];
 const homeProducts = [...products].sort((left, right) => { const leftRank = featuredProductOrder.indexOf(left.slug); const rightRank = featuredProductOrder.indexOf(right.slug); return (leftRank < 0 ? 99 : leftRank) - (rightRank < 0 ? 99 : rightRank); });
 
 export function HeroSection() {
-  return <section className="hero" id="home"><div className="hero-photo" role="img" aria-label="Precision measuring instruments in a modern laboratory" /><div className="container hero-inner"><div className="hero-copy">
+  return <section className="hero" id="home"><div className="hero-photo" role="img" aria-label="Precision machining and tool room workshop" /><div className="container hero-inner"><div className="hero-copy">
     <Eyebrow>PRECISION TOOL ROOM WORK</Eyebrow><h1>Precision tooling<br />built for your work.</h1>
     <p className="hero-description">Precision tool room work, tooling and inspection fixtures shaped around your machine, component and drawing.</p>
     <div className="hero-actions"><a className="button button-primary" href="#products">Explore our products <Arrow /></a><a className="text-link" href="#about">About the business <span>&rarr;</span></a></div>
