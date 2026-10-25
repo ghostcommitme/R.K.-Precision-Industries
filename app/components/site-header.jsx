@@ -27,6 +27,7 @@ export default function SiteHeader() {
             const active = !external && (pathname.startsWith("/products") ? href === "/products" : index === 0);
             return <a className={active ? "active" : ""} href={href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined} onClick={closeMenu} key={label}>{label}</a>;
           })}
+          <a className="button button-primary nav-cta" href="/#contact" onClick={closeMenu}>Get in touch <span aria-hidden="true">&rarr;</span></a>
         </nav>
       </div>
     </header>
