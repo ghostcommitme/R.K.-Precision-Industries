@@ -488,3 +488,7 @@
 	.contact-details{grid-template-columns:1fr}
 }
 .address-detail strong{line-height:1.25}
+@media(min-width:761px){
+	.address-detail{margin-bottom:8px}
+	.address-detail strong{line-height:1.1}
+}
